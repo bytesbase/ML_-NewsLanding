@@ -1,0 +1,60 @@
+@function setColor($color, $percentage, $ground-color: white) {
+    @return mix($color, $ground-color, $percentage);
+  }
+  
+  @mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+  }
+  @mixin transition-property($property...) {
+    -moz-transition-property:    $property;
+    -o-transition-property:      $property;
+    -webkit-transition-property: $property;
+    transition-property:         $property;
+  }
+  @mixin transition-duration($duration...) {
+    -moz-transition-property:    $duration;
+    -o-transition-property:      $duration;
+    -webkit-transition-property: $duration;
+    transition-property:         $duration;
+  }
+  @mixin transition-timing-function($timing...) {
+    -moz-transition-timing-function:    $timing;
+    -o-transition-timing-function:      $timing;
+    -webkit-transition-timing-function: $timing;
+    transition-timing-function:         $timing;
+  }
+  @mixin transition-delay($delay...) {
+    -moz-transition-delay:    $delay;
+    -o-transition-delay:      $delay;
+    -webkit-transition-delay: $delay;
+    transition-delay:         $delay;
+  }
+  
+  @mixin transform($transformation...) {
+    -webkit-transform: $transformation;
+    -moz-transform: $transformation;
+    -ms-transform: $transformation;
+    -o-transform: $transformation;
+    transform: $transformation;
+  }
+  
+  
+  @mixin gradient($color1, $color2, $direction) {
+    background: $color1; /* Old browsers */
+    @if($direction == 'horizontal') {
+      background: -moz-linear-gradient(90deg, $color1 0%, $color2 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(90deg, $color1 0%,$color2 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(90deg, $color1 0%,$color2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  }
+    @if($direction == 'vertical') {
+      background: -moz-linear-gradient(0deg, $color1 0%, $color2 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(0deg, $color1 0%,$color2 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(0deg, $color1 0%,$color2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  }
+  }
+  

@@ -1,26 +1,90 @@
-
 main {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 100%;
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: $md) {
     background-image: url("./assets/background.png");
   }
-  @media screen and (max-width: 960px) {
+
+  @media screen and (max-width: $md) {
     background: #fafafa;
   }
 
   & > #main {
     height: calc(100vh - #{$navbar-height});
+    @media screen and (max-width: $md) {
+      height: 100%;
+    }
 
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    & > div {
+      &:first-child {
+        margin-top: auto;
+        margin-bottom: auto;
+
+        @media screen and (max-width: $md) {
+          height: calc(100vh - #{$navbar-height});
+          align-items: center;
+        }
+      }
+
+      &:last-child {
+        & > div {
+          display: flex;
+          align-items: center;
+          height: 6vh; // +- height of opening in bottom
+          font-size: 0.8rem;
+
+          @media screen and (max-width: $md) {
+            height: 100%;
+            flex-direction: column;
+            margin-bottom: 2rem;
+          }
+
+          p {
+            color: $ML_LightGray;
+            margin-bottom: 0;
+            margin-right: 1.5rem;
+
+            @media screen and (max-width: $md) {
+            margin-right: 0;
+            margin-bottom: 1rem;
+            }
+          }
+
+          button {
+            @extend %default-button;
+            padding: 0.25rem 0.5rem;
+            background-color: white;
+            border: 1px solid $ML_LightGray;
+            color: $ML_DarkGray;
+
+            &:hover {
+              background-color: $ML_LightBlue;
+            }
+          }
+        }
+      }
+    }
 
     form {
-        button {
-            @extend %button;
-        }
+      input {
+        @extend %default-input;
+        width: 100%;
+      }
+
+      button {
+        @extend %default-button;
+        width: 100%;
+      }
+
+      span {
+        font-size: 0.7rem;
+      }
     }
   }
 }

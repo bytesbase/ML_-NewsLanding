@@ -1,12 +1,22 @@
-
-%button {
+%default-button {
+    @include transition(.5s ease background-color);
     background-color: $ML_DarkBlue;
     color: white;
+    padding: .5rem 1rem;
 
+    border-radius: 2px;
     outline: none;
     border: none;
-    
+
     &:disabled {
         background-color: $ML_LightBlue;
     }
+}
+
+%default-input {
+    padding: .5rem 1rem;
+    outline: none;
+    margin-bottom: 1rem;
+    border: 1px solid $ML_LightGray;
+    border-radius: 2px;
 }

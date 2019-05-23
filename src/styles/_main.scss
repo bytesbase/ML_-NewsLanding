@@ -1,11 +1,15 @@
 @import "utilities/colors";
 @import "utilities/variables";
+@import "utilities/mixins";
 @import "utilities/elements";
-
-@import "partials/header";
-@import "partials/main-content";
 
 @import "base/normalize";
 @import "base/bootstrap";
 @import "base/forms";
+
+@import "partials/header";
+@import "partials/main-content";
+@import "partials/footer";
+
+
 
