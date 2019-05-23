@@ -60,7 +60,7 @@ module.exports = {
                         loader: "file-loader",
                         options: {
                             name: '[name].[ext]',
-                            outputPath: 'static/',
+                            outputPath: 'assets/',
                             useRelativePath: true,
                         }
                     },
@@ -101,7 +101,7 @@ module.exports = {
             chunkFilename: "[id].css"
         }), 
         new HtmlWebpackPlugin({
-            title: 'MailerLite newsletter landing page',
+            title: 'Subscribe for weekly awesome in your inbox',
             template: './src/index.handlebars',
             minify: !isDevelopment && {
                 html5: true,
