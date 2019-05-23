@@ -13,6 +13,7 @@ main {
 
   & > #main {
     height: calc(100vh - #{$navbar-height});
+
     @media screen and (max-width: $md) {
       height: 100%;
     }
@@ -22,21 +23,23 @@ main {
     justify-content: space-between;
 
     & > div {
+      // form
       &:first-child {
         margin-top: auto;
         margin-bottom: auto;
 
         @media screen and (max-width: $md) {
-          height: calc(100vh - #{$navbar-height});
           align-items: center;
+          padding: 2rem 0;
         }
       }
 
+      // referral bottom
       &:last-child {
         & > div {
           display: flex;
           align-items: center;
-          height: 6vh; // +- height of opening in bottom
+          height: 8vh; // +- height of opening in bottom
           font-size: 0.8rem;
 
           @media screen and (max-width: $md) {
@@ -51,8 +54,8 @@ main {
             margin-right: 1.5rem;
 
             @media screen and (max-width: $md) {
-            margin-right: 0;
-            margin-bottom: 1rem;
+              margin-right: 0;
+              margin-bottom: 1rem;
             }
           }
 
@@ -69,6 +72,52 @@ main {
           }
         }
       }
+
+      .featured {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        @media screen and (max-width: $sm) {
+          margin-top: 2rem;
+        }
+
+        img {
+          width: 200px;
+          position: relative;
+          z-index: 2;
+        }
+        &:before,
+        &:after {
+          content: "";
+          width: 70%;
+          display: block;
+          position: absolute;
+          margin: 0 auto;
+          right: 0;
+          left: 0;
+          border-radius: 30px;
+          -webkit-transform: skewY(-5deg);
+          transform: skewY(-5deg);
+
+          @media screen and (max-width: $md) {
+            content: none;
+          }
+        }
+        &:before {
+          @include gradient($ML_DarkBlue, rgba($ML_DarkBlue, 0.9), "vertical");
+          height: 75%;
+          bottom: 40px;
+        }
+
+        &:after {
+          height: 50px;
+          bottom: -10px;
+          z-index: 2;
+          background: $ML_BackgroundWhite;
+        }
+      }
     }
 
     form {
@@ -82,9 +131,16 @@ main {
         width: 100%;
       }
 
-      span {
+      p {
+          margin-top: .5rem;
         font-size: 0.7rem;
       }
     }
   }
 }
+
+@media screen and (max-width: $sm) {
+    p, h1, h2 {
+        text-align: center;
+    }
+  }
