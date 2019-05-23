@@ -7502,6 +7502,11 @@ a.text-dark:hover, a.text-dark:focus {
 body, html {
   font-family: proxima-nova, sans-serif; }
 
+h1 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111; }
+
 #navbar {
   position: -webkit-sticky;
   position: sticky;
@@ -7540,7 +7545,9 @@ main {
       @media screen and (max-width: 992px) {
         main > #main > div:first-child {
           align-items: center;
-          padding: 2rem 0; } }
+          padding: 2rem 0; }
+          main > #main > div:first-child > div:first-child {
+            margin: auto; } }
     main > #main > div:last-child > div {
       display: flex;
       align-items: center;

@@ -31,6 +31,12 @@ main {
         @media screen and (max-width: $md) {
           align-items: center;
           padding: 2rem 0;
+
+          & > div {
+              &:first-child {
+                  margin: auto;
+              }
+          }
         }
       }
 
