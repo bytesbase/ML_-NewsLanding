@@ -13,3 +13,4 @@ document.getElementById("email").addEventListener("keyup", function() {
     }
 });
 
+// add aditional animations / functionality later.

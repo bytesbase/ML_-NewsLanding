@@ -48,8 +48,13 @@ footer {
         font-size: 15px;
 
         a {
+          @include transition(all 0.3s ease);
           color: $ML_DarkText;
           text-decoration: underline;
+
+          &:hover {
+            color: white;
+          }
         }
 
         &:last-child {
@@ -89,6 +94,10 @@ footer {
         }
         &.youtube {
           background-position: 0 -220px;
+        }
+
+        &:hover {
+          opacity: 1;
         }
       }
     }
