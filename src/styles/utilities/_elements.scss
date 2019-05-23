@@ -1,0 +1,12 @@
+
+%button {
+    background-color: $ML_DarkBlue;
+    color: white;
+
+    outline: none;
+    border: none;
+    
+    &:disabled {
+        background-color: $ML_LightBlue;
+    }
+}

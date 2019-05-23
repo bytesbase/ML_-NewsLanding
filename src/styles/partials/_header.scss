@@ -1,12 +1,10 @@
-@import "../utilities";
-
 #navbar {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1000;
 
-  padding: 1rem 0;
+  height: $navbar-height;
   border-bottom: 1px solid $ML_BorderGray;
 
   background: white;
