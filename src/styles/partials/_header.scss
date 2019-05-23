@@ -1,1 +1,23 @@
 @import "../utilities";
+
+#navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  padding: 1rem 0;
+  border-bottom: 1px solid $ML_BorderGray;
+
+  background: white;
+
+  display: flex;
+  align-items: center;
+
+  .logo {
+    img {
+      height: 30px;
+      margin: 0.3125rem 3.75rem 0.3125rem 2rem;
+    }
+  }
+}
