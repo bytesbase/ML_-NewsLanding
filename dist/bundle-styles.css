@@ -7663,8 +7663,14 @@ footer {
         margin-right: 1rem;
         font-size: 15px; }
         footer .footer-copy ul li a {
+          transition: all 0.3s ease;
           color: #62656a;
           text-decoration: underline; }
+          @media (prefers-reduced-motion: reduce) {
+            footer .footer-copy ul li a {
+              transition: none; } }
+          footer .footer-copy ul li a:hover {
+            color: white; }
         footer .footer-copy ul li:last-child {
           margin-right: 0; }
   @media screen and (max-width: 992px) {
@@ -7694,6 +7700,8 @@ footer {
       background-position: 0 -46px; }
     footer .socials a span.youtube {
       background-position: 0 -220px; }
+    footer .socials a span:hover {
+      opacity: 1; }
 
 
 /*# sourceMappingURL=bundle-styles.css.map*/

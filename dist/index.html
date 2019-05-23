@@ -20,6 +20,8 @@
     <meta name="twitter:description" content="Sharing is caring! Subscribe weekly to the MailerLite newsletter for tips, tricks & updates about email marketing, business, remote, features and so much more.">
     
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+
+    <meta name="robots" content="noindex" />
 <link href="bundle-styles.css" rel="stylesheet"></head>
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -45,8 +47,8 @@
                     <p><b>Join over 200,000 people who get the weekly news in their inbox.</b></p>
         
                     <form>
-                        <input type="email" placeholder="Enter your email address">
-                        <button disabled type="submit">Subscribe</button>
+                        <input id="email" type="email" placeholder="Enter your email address">
+                        <button disabled type="submit" id="subscribe">Subscribe</button>
                         <p>We'll never share your email address and you can opt out at any time, we promise.</p>
                     </form>
                 </div>
