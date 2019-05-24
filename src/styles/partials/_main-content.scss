@@ -12,10 +12,15 @@ main {
   }
 
   & > #main {
-    height: calc(100vh - #{$navbar-height});
+    height: 100%;
 
     @media screen and (max-width: $md) {
       height: 100%;
+    }
+
+    
+    @media screen and (min-height: 600px) {
+      height: calc(100vh - #{$navbar-height});
     }
 
     display: flex;
@@ -27,6 +32,10 @@ main {
       &:first-child {
         margin-top: auto;
         margin-bottom: auto;
+
+        @media screen and (max-height: 600px) {
+          padding: 4rem 0;
+        }
 
         @media screen and (max-width: $md) {
           align-items: center;
@@ -47,6 +56,11 @@ main {
           align-items: center;
           height: 8vh; // +- height of opening in bottom
           font-size: 0.8rem;
+          
+          // making sure it doesn't overlap over footer
+          @media screen and (max-height: 600px) and (min-width: $md) {
+            padding: 2rem 0;
+          }
 
           @media screen and (max-width: $md) {
             height: 100%;

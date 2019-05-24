@@ -7532,16 +7532,22 @@ main {
     main {
       background: #fafafa; } }
   main > #main {
-    height: calc(100vh - 73px);
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
     @media screen and (max-width: 992px) {
       main > #main {
         height: 100%; } }
+    @media screen and (min-height: 600px) {
+      main > #main {
+        height: calc(100vh - 73px); } }
     main > #main > div:first-child {
       margin-top: auto;
       margin-bottom: auto; }
+      @media screen and (max-height: 600px) {
+        main > #main > div:first-child {
+          padding: 4rem 0; } }
       @media screen and (max-width: 992px) {
         main > #main > div:first-child {
           align-items: center;
@@ -7553,6 +7559,9 @@ main {
       align-items: center;
       height: 8vh;
       font-size: 0.8rem; }
+      @media screen and (max-height: 600px) and (min-width: 992px) {
+        main > #main > div:last-child > div {
+          padding: 2rem 0; } }
       @media screen and (max-width: 992px) {
         main > #main > div:last-child > div {
           height: 100%;
