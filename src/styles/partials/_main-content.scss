@@ -12,15 +12,15 @@ main {
   }
 
   & > #main {
-    height: 100%;
+      height: calc(100vh - #{$navbar-height});
 
     @media screen and (max-width: $md) {
       height: 100%;
     }
 
     
-    @media screen and (min-height: 600px) {
-      height: calc(100vh - #{$navbar-height});
+    @media (max-height: 600px) and (min-width: $md) {
+      height: 100%;
     }
 
     display: flex;

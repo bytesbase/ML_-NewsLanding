@@ -7532,16 +7532,16 @@ main {
     main {
       background: #fafafa; } }
   main > #main {
-    height: 100%;
+    height: calc(100vh - 73px);
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
     @media screen and (max-width: 992px) {
       main > #main {
         height: 100%; } }
-    @media screen and (min-height: 600px) {
+    @media (max-height: 600px) and (min-width: 992px) {
       main > #main {
-        height: calc(100vh - 73px); } }
+        height: 100%; } }
     main > #main > div:first-child {
       margin-top: auto;
       margin-bottom: auto; }
